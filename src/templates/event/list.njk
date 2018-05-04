@@ -1,0 +1,17 @@
+{% macro list(events, tmpl) %}
+    {% from "./tile.njk" import drawEvent %}
+    <div class="wb-event-list">
+        <div class="wb-tiles" data-event-list>
+            {% for event in events %}
+                {% if tmpl %}
+                    {{ tmpl(event) | safe }}
+                {% else %}
+                    {{ drawEvent(event) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="wb-no-events">
+            No events were found
+        </div>
+    </div>
+{% endmacro %}

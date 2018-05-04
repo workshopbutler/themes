@@ -1,0 +1,194 @@
+@dacota: #1D3F7F;
+
+.dacota .wb-content {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: Arapey, "SFNS Display", "Helvetica Neue", Arial, sans-serif;
+
+  .wb-title,
+  .wb-profile__name h3,
+  .wb-form__title,
+  .wb-form__label,
+  .wb-ticket__val,
+  .wb-ticket__name,
+  .wb-ticket__footer,
+  .wb-workshops__title {
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    font-family: Montserrat, "SFNS Display", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wb-ticket__footer,
+  .wb-sidebar__register,
+  .wb-form__btn {
+    font-family: Montserrat, "SFNS Display", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wb-header {
+    padding-top: 58px;
+    padding-bottom: 72px;
+    background-color: @dacota;
+    color: #FFF;
+  }
+
+  .wb-title {
+    margin-bottom: 9px;
+  }
+
+  .wb-subtitle {
+    font-size: 18px;
+  }
+
+  .wb-desc {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .wb-profile__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .b-flip__link {
+    font-size: 18px;
+    padding-bottom: 30px;
+  }
+
+  .wb-form__input {
+    font-size: 16px;
+    font-family: Arapey, "SFNS Display", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wb-sidebar__register,
+  .wb-form__btn {
+    font-size: 18px;
+    background: #7A7A7A;
+    color: #FFF !important;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 0;
+  }
+
+
+  .wb-tickets {
+    border: 2px solid #F9F9F9;
+    margin-bottom: 29px;
+    background-color: #E8E8E8;
+    border-radius: 0;
+
+    .wb-ticket {
+      padding: 11px 9px;
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      margin: 5px;
+      text-align: left;
+
+      &.state-closed {
+        border-color: #e8e8e8;
+        background-color: transparent;
+      }
+    }
+  }
+
+
+  .wb-ticket {
+    background-color: #FFF;
+    border-color: #FFF;
+    border-radius: 0;
+
+    &.state-closed {
+      background-color: transparent;
+      border-color: #C1BFBF;
+
+      .wb-ticket__name,
+      .wb-ticket__val {
+        color: #7A7A7A;
+      }
+    }
+  }
+
+  .wb-ticket__val {
+    color: @dacota;
+  }
+
+  .wb-ticket__name {
+    color: #1D1D1D;
+  }
+
+  .wb-ticket__desc {
+    font-size: 18px;
+    color: #7A7A7A;
+  }
+
+  .wb-ticket__footer {
+    color: #7A7A7A;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+  }
+
+  .n-sharing__link {
+    width: 44px;
+    height: 44px;
+    border-width: 2px;
+    border-color: #7A7A7A;
+
+    &.type-fb::before {
+      left: 13px;
+      top: 9px;
+      width: 14px;
+      height: 23px;
+    }
+
+    &.type-tw::before {
+      left: 9px;
+      top: 12px;
+      width: 21px;
+      height: 18px;
+    }
+
+    &.type-ld::before {
+      left: 10px;
+      top: 11px;
+      width: 20px;
+      height: 19px;
+    }
+
+    &.type-gp::before {
+      width: 18px;
+      height: 19px;
+    }
+  }
+
+  .wb-workshop {
+    font-size: 18px;
+  }
+
+  .wb-link,
+  .b-flip__link,
+  .wb-trainers a,
+  .wb-desc a {
+    color: #1C3F7F !important;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.wb-footer {
+    background-color: @dacota;
+
+    .wb-footer__content {
+      color: #FFF;
+    }
+
+    .link-black {
+      color: #FFF !important;
+      border-bottom: none !important;
+    }
+  }
+  .wb-sharing__icon {
+    color: transparent;
+  }
+}

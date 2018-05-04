@@ -1,0 +1,203 @@
+@britton: #7796a8;
+
+.britton .wb-content {
+  font-family: 'Droid Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #3d4246;
+
+  a {
+    color: @britton;
+  }
+
+  .wb-btn-primary {
+    color: #fff !important;
+    background-color: #7796a8;
+    border-color: #668394;
+    border-radius: 2px;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &.active,
+    &:active {
+      opacity: 1;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      opacity: .7 !important;
+      cursor: default;
+    }
+  }
+
+  .link-msimple {
+    color: @britton !important;
+
+    &:hover {
+      color: @britton !important;
+      border-bottom-color: @britton;
+    }
+  }
+
+  // tiles
+  .wb-tile {
+    background-color: #f6f6f6;
+  }
+
+  .wb-tile-title {
+    color: @britton;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    max-height: 72px;
+    overflow: hidden;
+  }
+
+  .wb-tile-free {
+    color: #859529;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wb-tile-info {
+    max-height: 46px;
+    overflow: hidden;
+    color: #788188;
+  }
+
+  .wb-tile-content {
+    color: #3d4246;
+    line-height: 26px;
+    max-height: 155px;
+  }
+
+  .wb-tile-button {
+    position: static;
+    height: auto;
+    margin: 15px 0;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+  }
+
+  .wb-tile-btn {
+    position: static;
+    padding: 6px 15px;
+    height: auto;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  // table
+  .wb-table__head {
+    color: #788188;
+    border-color: #e8e9eb;
+  }
+
+  .wb-table__row {
+    border-color: #e8e9eb;
+
+    &:nth-child(2n + 1) {
+      background-color: #f6f6f6;
+    }
+  }
+
+  .wb-table__btn {
+    background: #7796a8;
+    border: 1px solid #668394;
+    color: #fff !important;
+  }
+
+  .wb-table__first-free,
+  .wb-table__free {
+    font-weight: bold;
+    font-size: 14px;
+    color: #859529;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  // detail
+  .wsb-title,
+  .wsb-trainer__name h3,
+  .d-eventform__title,
+  .d-eventform__label,
+  .d-other__title,
+  .non-alfred-tickets__title {
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wsb-header {
+    background-color: #f6f6f6;
+  }
+
+  .d-eventother__link,
+  .b-flip__link,
+  .wsb-trainers a,
+  .wsb-desc a {
+    color: @britton !important;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .d-eventform__input {
+    font-size: 16px;
+    font-family: 'Droid Sans', "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wsb-sidebar__register,
+  .d-eventform__btn {
+    background-color: @britton;
+    border: 1px solid #668393 !important;
+  }
+
+  .wb-ticket.state-closed {
+    background-color: #f6f6f6;
+  }
+
+  .wsb-ticket__val {
+    color: #333;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wsb-ticket__name {
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wsb-ticket__footer {
+    text-transform: uppercase;
+  }
+
+  .n-eventprice_type_inline {
+    .wb-ticket {
+      border-color: #e8e8e8;
+    }
+  }
+
+  // sharing
+  .b-social-btn {
+    margin-bottom: 6px;
+    border: 1px solid #e8e8e8;
+    background-color: #f6f6f6;
+    color: @britton !important;
+    padding: 6px 0 6px 26px;
+    font-size: 14px;
+    line-height: 1;
+    .transition(all .15s ease);
+
+    &:hover {
+      border-color: #ccc;
+    }
+  }
+
+}

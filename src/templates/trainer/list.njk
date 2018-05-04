@@ -1,0 +1,17 @@
+{% macro drawTrainers(trainers, tmpl) %}
+    {% from "./item.njk" import drawTrainer %}
+    <div class="wb-trainer-list">
+        <div class="wb-tiles" data-trainer-list>
+            {% for trainer in trainers %}
+                {% if tmpl %}
+                    {{ tmpl(trainer) | safe }}
+                {% else %}
+                    {{ drawTrainer(trainer) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="wb-no-trainers">
+            No trainers were found
+        </div>
+    </div>
+{% endmacro %}

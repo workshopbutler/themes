@@ -1,0 +1,55 @@
+@import "core/_mixins";
+@import "core/_normalize";
+@import "core/_scaffolding";
+@import "core/_controls";
+@import "core/_buttons";
+@import "core/_helpers";
+
+// list
+@import "list/_common";
+@import "list/_filters";
+@import "list/_tiles";
+@import "list/_table";
+@import "list/_trainers";
+
+// theme styles
+@import "themes/_alfred";
+@import "themes/_britton";
+@import "themes/_gatsby";
+@import "themes/_hayes";
+@import "themes/_dacota";
+
+// widgets
+@import "./event/_main";
+@import "./event/_add-form";
+@import "./event/_sharing";
+
+// widgets
+@import "./trainer/_main";
+
+// color schema
+@import "./event/theme/_britton";
+@import "./event/theme/_dacota";
+@import "./event/theme/_gatsby";
+@import "./event/theme/_hayes";
+
+// common states
+.wb-before-registration {
+  display: none;
+}
+
+.wb-state__pre-registration {
+  .wb-before-registration {
+    display: block;
+  }
+}
+
+.wb-state__post-registration {
+  .wb-after-registration {
+    display: block;
+  }
+
+  .wb-before-registration {
+    display: none;
+  }
+}

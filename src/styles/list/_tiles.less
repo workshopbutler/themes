@@ -1,0 +1,129 @@
+
+.wb-content {
+
+  .wb-tiles {
+    .clearfix();
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .wb-no-events {
+    display: none;
+    margin-bottom: 30px;
+  }
+
+  .wb-tile {
+    flex: 0 0 32%;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    height: 390px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 21px 26px 0;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-right: 12px;
+
+    &:hover .wb-tile-button {
+      .transform(translate(0, -70px));
+
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .wb-tile-title {
+    display: block;
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: bold;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    .transition(all .15s ease);
+    margin-bottom: 13px;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  .wb-tile-free {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+    margin-left: 11px;
+    letter-spacing: .5px;
+    vertical-align: 1px;
+  }
+
+  .wb-tile-info {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .wb-tile-content {
+    font-size: 16px;
+    line-height: 26px;
+    max-height: 182px;
+    overflow: hidden;
+  }
+
+  .wb-tile-button {
+    height: 70px;
+    bottom: -70px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    .transition(all .15s ease);
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 50px;
+      right: 0;
+      left: 0;
+      top: -50px;
+      .transition(all .15s ease);
+    }
+  }
+
+  .wb-tile-btn {
+    padding: 0;
+    height: 70px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    font-size: 22px;
+    line-height: 66px;
+    font-weight: bold;
+    border-radius: 0;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .wb-tile {
+      flex: 0 1 48%;
+      height: 360px;
+      margin-right: 2% !important;
+      margin-bottom: 20px;
+    }
+
+    .wb-tile-content {
+      max-height: 130px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .wb-tile {
+      flex: 0 1 100%;
+      margin-right: 0 !important;
+    }
+  }
+}

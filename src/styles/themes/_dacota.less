@@ -1,0 +1,235 @@
+@dacota: #1c3f7f;
+
+.dacota .wb-content {
+  font-family: 'Arapey', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #343434;
+
+  a {
+    color: @dacota;
+  }
+
+  .wb-btn-primary {
+    color: #fff !important;
+    background: #7a7a7a;
+    border-color: #7a7a7a;
+    font-family: 'Montserrat', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 0;
+
+    &:hover {
+      background-color: #666;
+    }
+
+    &.active,
+    &:active {
+      opacity: 1;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      opacity: .7 !important;
+      cursor: default;
+    }
+  }
+
+  .link-msimple {
+    color: #255184 !important;
+
+    &:hover {
+      color: #255184 !important;
+      border-bottom-color: #255184;
+    }
+  }
+
+  // tiles
+  .wb-tile-title,
+  .wb-tile-free {
+    font-family: 'Montserrat', Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+  .wb-tile {
+    background-color: transparent;
+    border: 1px solid rgba(52, 53, 53, .2);
+  }
+
+  .wb-tile-title {
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    color: @dacota;
+  }
+
+  .wb-tile-info {
+    color: #788188;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .wb-tile-free {
+    color: #343434;
+  }
+
+  .wb-tile-content {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  // table
+  .wb-table__btn,
+  .wb-table__first-free,
+  .wb-table__free {
+    font-family: 'Montserrat', Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+  .wb-table__head {
+    display: none;
+  }
+
+  .wb-table__row {
+    border-color: rgba(53, 52, 52, .1);
+
+    &:first-child {
+      border-top: 1px solid rgba(53, 52, 52, .1);
+    }
+  }
+
+  .wb-table__col {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .wb-table__btn {
+    background: #7a7a7a;
+    border: none;
+    color: #fff !important;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 0;
+  }
+
+  .wb-table__first-free,
+  .wb-table__free {
+    font-weight: bold;
+    font-size: 12px;
+    color: #343434;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  // details
+  .wb-title,
+  .wb-header h1,
+  .wb-trainer__name h3,
+  .d-eventform__title,
+  .d-eventform__label,
+  .wb-ticket__val,
+  .wb-ticket__name,
+  .wb-ticket__footer,
+  .d-eventother__title {
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', 'SFNS Display', "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wb-ticket__footer,
+  .wb-sidebar__register {
+    font-family: 'Montserrat', 'SFNS Display', "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wb-header {
+    padding-top: 58px;
+    padding-bottom: 72px;
+    background-color: @dacota;
+    color: #fff;
+  }
+
+  .wb-title {
+    margin-bottom: 9px;
+
+    &.type-only {
+      color: #343434;
+    }
+  }
+
+  .wb-subtitle {
+    font-size: 18px;
+  }
+
+  .wb-desc {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .wb-trainer__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .b-flip__link {
+    font-size: 18px;
+  }
+
+  .d-eventform__input {
+    font-size: 16px;
+    font-family: 'Arapey', 'SFNS Display', "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wb-sidebar__register,
+  .d-eventform__btn {
+    font-size: 18px;
+    background: #7a7a7a;
+    color: #fff !important;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 0;
+  }
+
+  .wb-ticket {
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 0;
+
+    &.state-closed {
+      background-color: #e8e8e8;
+      border-color: #c1bfbf;
+
+      .wb-ticket__name,
+      .wb-ticket__val {
+        color: #7a7a7a;
+      }
+    }
+  }
+
+  .wb-ticket__footer {
+    text-transform: uppercase;
+  }
+
+  .wb-ticket__val {
+    color: @dacota;
+  }
+
+  .wb-ticket__name {
+    color: #1d1d1d;
+  }
+
+  .wb-ticket__desc {
+    font-size: 18px;
+    color: #7a7a7a;
+  }
+
+  .wb-ticket__footer {
+    color: #7a7a7a;
+    font-weight: 400 !important;
+  }
+
+  .wb-trainers a,
+  .wb-desc a {
+    color: #1c3f7f !important;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

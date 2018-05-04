@@ -1,0 +1,197 @@
+.hayes .wb-content {
+  color: #333;
+
+  @textSize: 14px;
+  font-size: @textSize;
+  line-height: 1.4;
+  font-family: "Open Sans", "SFNS Display", "Helvetica Neue", Arial, sans-serif;
+
+  .wb-title,
+  .wb-ticket__val,
+  .wb-ticket__name,
+  .wb-profile__name h3,
+  .wb-form__title,
+  .wb-form__label,
+  .wb-sidebar__register,
+  .wb-form__btn {
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    font-family: Montserrat, "SFNS Display", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wb-header {
+    padding-bottom: 10px;
+  }
+
+  .wb-title {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+
+  .wb-subtitle,
+  .wb-page,
+  .wb-workshops__title {
+    font-size: @textSize;
+  }
+
+
+  .wb-body {
+    position: relative;
+    padding-top: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 20px;
+      left: 20px;
+      height: 2px;
+      background-color: #E7E7E7;
+    }
+  }
+
+  .wb-desc {
+    font-size: 14px;
+    line-height: 23px;
+
+    p {
+      margin-bottom: 8px;
+    }
+  }
+
+  .wb-info {
+    line-height: 1.7em;
+  }
+
+  .wb-trainers .wb-profile__text {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .wb-tickets {
+    margin-bottom: 20px;
+    background-color: #FFF;
+
+    .wb-ticket {
+      padding: 11px 9px;
+      background-color: @background-grey;
+      border: 1px solid #e8e8e8;
+      border-radius: 2px;
+      margin: 0 0 10px;
+      text-align: left;
+
+      &.state-closed {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .wb-ticket {
+    border: 2px solid #F9F9F9;
+    background-color: #F9F9F9;
+
+    &.state-closed {
+      background-color: #FFF;
+
+      .wb-ticket__val,
+      .wb-ticket__name {
+        color: #7A7A7A;
+      }
+    }
+  }
+
+  .wb-ticket__val {
+    color: #32866C;
+    font-size: 28px;
+    margin-bottom: 3px;
+  }
+
+  .wb-ticket__name {
+    color: #343434;
+    font-size: 14px;
+  }
+
+  .wb-ticket__desc {
+    color: #7A7A7A;
+    font-size: 14px;
+  }
+
+  .wb-ticket__footer {
+    text-transform: uppercase;
+  }
+
+  .wb-sharing {
+    margin-bottom: 42px;
+
+    a {
+      border-radius: 0;
+    }
+  }
+
+  .wb-workshops {
+    font-size: @textSize;
+    color: #7A7A7A;
+  }
+  .wb-workshops__title {
+    font-weight: bold;
+    color: @text-black;
+  }
+
+  .wb-link,
+  .wb-trainers a,
+  .wb-desc a {
+    color: #32866C !important;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .wb-form__input {
+    font-size: 14px;
+    font-family: "Open Sans", "SFNS Display", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .wb-sidebar__register {
+    margin-bottom: 21px;
+  }
+
+  .wb-sidebar__register,
+  .wb-form__btn {
+    background: none;
+    border: 2px solid #333 !important;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 16px 0;
+    color: #333 !important;
+  }
+
+  .wb-form {
+    padding-top: 22px;
+    margin-top: 41px;
+  }
+
+  &.wb-footer {
+    background-color: transparent;
+    padding-top: 0;
+
+    .wb-center {
+      position: relative;
+      padding-top: 34px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 20px;
+        left: 20px;
+        height: 2px;
+        background-color: #E7E7E7;
+      }
+    }
+  }
+  .wb-sharing__icon {
+    color: transparent;
+  }
+
+}

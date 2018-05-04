@@ -1,0 +1,152 @@
+.wb-content {
+
+  .wb-trainer-details__header {
+    background-color: @light-grey;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .wb-trainer__header-row {
+    flex: 0 0 100px;
+    padding-bottom: 10px;
+  }
+
+  .wb-trainer-details-image {
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin-right: 20px;
+    float: left;
+  }
+
+  .wb-trainer-details-title-container {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .wb-trainer-details-title {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .wb-trainer-details-country {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.3;
+    color: @text-grey;
+  }
+
+  .wb-contact-button {
+    float: right;
+    width: 150px;
+  }
+  .wb-trainer__social-networks  {
+    float: left;
+    padding-bottom: 10px;
+    a {
+      padding-left: 10px;
+    }
+  }
+
+  .wb-trainer__badge {
+    width: 100px;
+    padding-bottom: 20px;
+  }
+
+  .wb-trainer-details-facts {
+    display: flex;
+    flex-wrap: wrap;
+
+    .wb-trainer-details-fact {
+      flex: 1 1 50px;
+      text-align: center;
+      margin: 1rem 1em 1rem 0;
+      padding: 10px;
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .wb-big-number {
+      font-size: 3rem;
+    }
+
+    .wb-descr {
+      color: @text-grey;
+      display: block;
+      clear: both;
+      font-size: 1.1rem;
+    }
+    .wb-descr__sub {
+      color: @text-grey;
+      font-size: 0.85rem;
+    }
+  }
+  .wb-endorsement {
+    background-color: @light-grey;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .wb-cite {
+    color: @text-grey;
+  }
+  .wb-rating {
+    float: right;
+    color: @yellow;
+    font-size: 14px;
+
+    .fa-stack {
+      width: 1.1em;
+      line-height: 1.9em;
+    }
+  }
+
+  @media screen and ( max-width: 1150px ) {
+    .wb-center {
+      width: auto;
+    }
+  }
+
+  @media screen and ( max-width: 740px ) {
+    .wb-left-col {
+      margin-right: 0;
+    }
+    .wb-right-col {
+      float: none;
+      width: auto;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+    .wb-trainer__social-networks {
+      width: 100%;
+      padding-top: 20px;
+      a:first-child {
+        padding-left: 0;
+      }
+    }
+    .wb-trainer-details-facts {
+      .wb-trainer-details-fact {
+        margin: 0.5rem 0.8em 0.5rem 0.8em;
+      }
+    }
+    .wb-trainer-details-image {
+      width: 100px;
+      height: 100px;
+    }
+    .wb-trainer-details-title {
+      font-size: 24px;
+    }
+    .wb-contact-button {
+      width: 100%;
+      float: none;
+      height: 36px;
+      font-size: 16px !important;
+      line-height: 0.4;
+    }
+  }
+
+}

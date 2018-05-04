@@ -1,0 +1,9 @@
+{% for event in events %}
+    <div class="wb-workshop">
+        {{ event.schedule }} in {{ event.location }}
+        <br>
+        <a href="{{ event.url }}" class="wb-link">
+            {{ event.title }}
+        </a>
+    </div>
+{% endfor %}

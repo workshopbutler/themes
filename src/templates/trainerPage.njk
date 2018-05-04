@@ -1,0 +1,132 @@
+<div class="wb-content">
+    <div class="wb-page">
+        <div class="wb-body wb-center">
+            <div class="wb-trainer-details__header">
+                <div class="wb-trainer__header-row">
+                    {% set photo = "background-image: url(" + trainer.photo + ");" %}
+                    <div class="wb-trainer-details-image" style="{{ photo }}"></div>
+                    <div class="wb-trainer-details-title-container">
+                        <h1 class="wb-trainer-details-title">{{ trainer.firstName + ' ' + trainer.lastName }}</h1>
+                        <div class="wb-trainer-details-country">{{ trainer.country }}</div>
+                    </div>
+                    <div class="wb-trainer__social-networks">
+                        {% if trainer.socialLinks.website %}
+                            <a href="{{ trainer.socialLinks.website }}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        {% endif %}
+                        {% if trainer.socialLinks.blog %}
+                            <a href="{{ trainer.socialLinks.blog }}" target="_blank"><i class="fas fa-rss"></i></a>
+                        {% endif %}
+                        {% if trainer.socialLinks.twitter %}
+                            <a href="{{ trainer.socialLinks.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                        {% endif %}
+                        {% if trainer.socialLinks.facebook %}
+                            <a href="{{ trainer.socialLinks.facebook }}" target="_blank"><i class="fab fa-facebook"></i></a>
+                        {% endif %}
+                        {% if trainer.socialLinks.linkedIn %}
+                            <a href="{{ trainer.socialLinks.linkedIn }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        {% endif %}
+                        {% if trainer.socialLinks.googlePlus %}
+                            <a href="{{ trainer.socialLinks.googlePlus }}" target="_blank"><i class="fab fa-google"></i></a>
+                        {% endif %}
+                    </div>
+                    <a class="btn btn-primary wb-form__btn wb-contact-button" href="mailto:{{ trainer.email }}"
+                       title="Contact by email">Contact by email</a>
+                </div>
+                <div class="wb-trainer__header-row">
+                    <div class="wb-trainer-details-facts">
+                        {% if trainer.yearsOfExperience %}
+                            <div class="wb-trainer-details-fact">
+                                <span class="wb-big-number">{{ trainer.yearsOfExperience }}</span>
+                                <span class="wb-descr">Years as trainer</span>
+                            </div>
+                        {% endif %}
+                        {% if trainer.numberOfEvents %}
+                            <div class="wb-trainer-details-fact">
+                                <span class="wb-big-number">{{ trainer.numberOfEvents }}</span>
+                                <span class="wb-descr">Events held</span>
+                            </div>
+                        {% endif %}
+                        {% if trainer.publicStats.numberOfEvaluations > 0 %}
+                            <div class="wb-trainer-details-fact">
+                                <span class="wb-big-number">{{ trainer.publicStats.rating.toPrecision(3) }}</span>&nbsp;<span class="wb-small-number">/&nbsp;10</span>
+                                <span class="wb-descr">Rating for public events</span>
+                                <span class="wb-descr__sub">based on {{ trainer.publicStats.numberOfEvaluations }}&nbsp;evaluations</span>
+                            </div>
+                        {% endif %}
+                        {% if trainer.privateStats.numberOfEvaluations > 0 %}
+                            <div class="wb-trainer-details-fact">
+                                <span class="wb-big-number">{{ trainer.privateStats.rating.toPrecision(3) }}</span>&nbsp;<span class="wb-small-number">/&nbsp;10</span>
+                                <span class="wb-descr">Rating for private events</span>
+                                <span class="wb-descr__sub">based on {{ trainer.privateStats.numberOfEvaluations }}&nbsp;evaluations</span>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="wb-right-col">
+                <div class="wb-trainer-badges">
+                    {% for badge in trainer.badges %}
+                        <img alt="{{ badge.name }}" class="wb-trainer__badge" src="{{ badge.url }}">
+                    {% endfor %}
+                </div>
+                <div class="wb-trainer-events">
+                    <div class="wb-workshops" id="upcoming-events">
+                        <div class="wb-workshops__title">
+                            Upcoming events
+                        </div>
+                        <div data-events-list>
+                        </div>
+                    </div>
+                    <div class="wb-workshops" id="past-events">
+                        <div class="wb-workshops__title">
+                            Past events
+                        </div>
+                        <div data-events-list>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wb-left-col">
+                <h3>Short Bio</h3>
+                <div class="wb-desc">
+                    {{ trainer.bio | safe }}
+                </div>
+                {% if trainer.endorsements.length > 0 %}
+                    <h3>Attendees' Feedback</h3>
+                    <div class="wb-trainer-details-endorsements">
+                        {% for endorsement in trainer.endorsements %}
+                            <div class="wb-endorsement">
+                                <span class="wb-cite">
+                                    <strong>{{ endorsement.name }}</strong>
+                                    {% if endorsement.company %}
+                                        , {{ endorsement.company }}
+                                    {% endif %}
+                                </span>
+                                {% if endorsement.rating %}
+                                    <div class="wb-rating">
+                                    {% set rating = endorsement.rating %}
+                                    {% set stars = range(5) %}
+                                    {% for item in stars %}
+                                        {% set index = item + 1 %}
+                                        {% if index * 2 <= rating %}
+                                            <i class="fas fa-star"></i>
+                                            {% elif index * 2 > rating + 1 %}
+                                            <i class="far fa-star"></i>
+                                        {% else %}
+                                            <div class="fa-stack">
+                                                <i class="fas fa-star-half fa-stack-1x"></i>
+                                                <i class="far fa-star-half fa-stack-1x fa-flip-horizontal"></i>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </div>
+                                {% endif %}
+                                <p class="wb-endorsement-text">{{ endorsement.content }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
