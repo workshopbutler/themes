@@ -18,12 +18,14 @@
     height: 150px;
     display: inline-block;
     margin-right: 20px;
-    float: left;
+    position: absolute;
   }
 
-  .wb-trainer-details-title-container {
-    display: block;
+  .wb-trainer-details-title-container, .wb-trainer-details-subtitle-container {
     margin-bottom: 2rem;
+    vertical-align: top;
+    position: relative;
+    margin-left: 170px;
   }
 
   .wb-trainer-details-title {
@@ -43,9 +45,11 @@
   .wb-contact-button {
     float: right;
     width: 150px;
+    margin-right: 10px;
   }
+
   .wb-trainer__social-networks  {
-    float: left;
+    display: inline-block;
     padding-bottom: 10px;
     a {
       padding-left: 10px;
@@ -105,13 +109,13 @@
     }
   }
 
-  @media screen and ( max-width: 1150px ) {
+  @media screen and ( max-width: 72em ) {
     .wb-center {
       width: auto;
     }
   }
 
-  @media screen and ( max-width: 740px ) {
+  @media screen and ( max-width: 63em ) {
     .wb-left-col {
       margin-right: 0;
     }
@@ -121,29 +125,46 @@
       margin-left: 0;
       margin-bottom: 30px;
     }
-    .wb-trainer__social-networks {
-      width: 100%;
-      padding-top: 20px;
-      a:first-child {
-        padding-left: 0;
-      }
-    }
     .wb-trainer-details-facts {
       .wb-trainer-details-fact {
         margin: 0.5rem 0.8em 0.5rem 0.8em;
       }
     }
+  }
+  @media screen and ( max-width: 40em ) {
+    .wb-trainer-details-title {
+      font-size: 24px;
+    }
     .wb-trainer-details-image {
       width: 100px;
       height: 100px;
     }
-    .wb-trainer-details-title {
-      font-size: 24px;
+    .wb-trainer-details-title-container {
+      margin-left: 120px;
+    }
+    .wb-trainer-details-subtitle-container {
+      margin-left: 0;
+      margin-top: 70px;
+    }
+    .wb-trainer__social-networks {
+      a:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+  @media screen and ( max-width: 30em ) {
+    .wb-trainer-details-subtitle-container {
+      margin-left: 0;
+      margin-top: 50px;
+    }
+    .wb-trainer__social-networks {
+      display: block;
     }
     .wb-contact-button {
-      width: 100%;
+      display: block;
       float: none;
-      height: 36px;
+      min-width: 100%;
+      height: 40px;
       font-size: 16px !important;
       line-height: 0.4;
     }

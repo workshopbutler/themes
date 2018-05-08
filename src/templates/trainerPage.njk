@@ -9,28 +9,30 @@
                         <h1 class="wb-trainer-details-title">{{ trainer.firstName + ' ' + trainer.lastName }}</h1>
                         <div class="wb-trainer-details-country">{{ trainer.country }}</div>
                     </div>
-                    <div class="wb-trainer__social-networks">
-                        {% if trainer.socialLinks.website %}
-                            <a href="{{ trainer.socialLinks.website }}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                        {% endif %}
-                        {% if trainer.socialLinks.blog %}
-                            <a href="{{ trainer.socialLinks.blog }}" target="_blank"><i class="fas fa-rss"></i></a>
-                        {% endif %}
-                        {% if trainer.socialLinks.twitter %}
-                            <a href="{{ trainer.socialLinks.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
-                        {% endif %}
-                        {% if trainer.socialLinks.facebook %}
-                            <a href="{{ trainer.socialLinks.facebook }}" target="_blank"><i class="fab fa-facebook"></i></a>
-                        {% endif %}
-                        {% if trainer.socialLinks.linkedIn %}
-                            <a href="{{ trainer.socialLinks.linkedIn }}" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        {% endif %}
-                        {% if trainer.socialLinks.googlePlus %}
-                            <a href="{{ trainer.socialLinks.googlePlus }}" target="_blank"><i class="fab fa-google"></i></a>
-                        {% endif %}
+                    <div class="wb-trainer-details-subtitle-container">
+                        <div class="wb-trainer__social-networks">
+                            {% if trainer.socialLinks.website %}
+                                <a href="{{ trainer.socialLinks.website }}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            {% endif %}
+                            {% if trainer.socialLinks.blog %}
+                                <a href="{{ trainer.socialLinks.blog }}" target="_blank"><i class="fas fa-rss"></i></a>
+                            {% endif %}
+                            {% if trainer.socialLinks.twitter %}
+                                <a href="{{ trainer.socialLinks.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                            {% endif %}
+                            {% if trainer.socialLinks.facebook %}
+                                <a href="{{ trainer.socialLinks.facebook }}" target="_blank"><i class="fab fa-facebook"></i></a>
+                            {% endif %}
+                            {% if trainer.socialLinks.linkedIn %}
+                                <a href="{{ trainer.socialLinks.linkedIn }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            {% endif %}
+                            {% if trainer.socialLinks.googlePlus %}
+                                <a href="{{ trainer.socialLinks.googlePlus }}" target="_blank"><i class="fab fa-google"></i></a>
+                            {% endif %}
+                        </div>
+                        <a class="btn btn-primary wb-form__btn wb-contact-button" href="mailto:{{ trainer.email }}"
+                           title="Contact by email">Contact by email</a>
                     </div>
-                    <a class="btn btn-primary wb-form__btn wb-contact-button" href="mailto:{{ trainer.email }}"
-                       title="Contact by email">Contact by email</a>
                 </div>
                 <div class="wb-trainer__header-row">
                     <div class="wb-trainer-details-facts">
