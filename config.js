@@ -3,8 +3,8 @@ const isDev = (process.env.NODE_ENV !== "build");
 
 const options = {
     apiKey: process.env.API_KEY,
-    widgetVersion: '0.3.0',
-    theme: 'alfred'
+    widgetVersion: '0.3.2',
+    theme: 'gatsby'
 };
 
 const mapping = {

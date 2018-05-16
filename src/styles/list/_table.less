@@ -112,9 +112,25 @@
       &:nth-child(4) {
         margin-right: 0;
         width: 28%;
+        position: relative;
       }
     }
+  }
 
+  @media screen and (max-width: 800px) {
+    .wb-table__free {
+      position: absolute;
+      left: -20px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .wb-table__first-free {
+      display: inline-block;
+    }
+    .wb-table__free {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 600px) {
