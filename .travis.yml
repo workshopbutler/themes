@@ -2,23 +2,39 @@ language: node_js
 node_js:
   - "node"
 
+before_install:
+  - sudo apt-get install -y pip
+  - pip install awscli
+
 install:
   - npm install
+
 script:
   - npm run build
 
-before_deploy:
-  - mkdir -p .theme
-  - cp dist/templates.*.js .theme/
-  - cp dist/styles.*.min.css .theme/
+after_success:
+  - mkdir -p .theme .cdn
+  - cp dist/templates.*.js .latest/
+  - cp dist/styles.*.min.css .latest/
+
+  - export AWS_ACCESS_KEY_ID=$AWS_S3_ACCESS_KEY
+  - export AWS_SECRET_ACCESS_KEY=$AWS_S3_SECRET_KEY
+  - export AWS_DEFAULT_REGION=eu-central-1
+  - aws s3 sync s3://wsb-integrations .cdn
+  - cp dist/templates.*.js .all/
+  - cp dist/styles.*.min.css .all/
+
 
 deploy:
   - provider: s3
     access_key_id: $AWS_S3_ACCESS_KEY
     secret_access_key: $AWS_S3_SECRET_KEY
     skip_cleanup: true
-    local_dir: .theme
+    local_dir: .latest
     bucket: wsb-integrations
-    upload-dir: themes
-    region: eu-central-1
+
+  - provider: surge
+    project: ./.all/
+    domain: cdn.workshopbutler.com
+    skip_cleanup: true
 
