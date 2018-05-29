@@ -8,7 +8,7 @@ script:
   - npm run build
 
 before_deploy:
-  - mkdir .templates .styles
+  - mkdir -p .templates .styles
   - cp dist/templates.*.js .templates/
   - cp dist/styles.*.min.css .styles/
 
