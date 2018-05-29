@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  - "node"
+
+install:
+  - npm install
+script:
+  - npm run build
+
+before_deploy:
+  - mkdir .templates .styles
+  - cp dist/templates.*.js .templates/
+  - cp dist/styles.*.min.css .styles/
+
+deploy:
+  - provider: s3
+    access_key_id: AWS_S3_ACCESS_KEY
+    secret_access_key: AWS_S3_SECRET_KEY
+    skip_cleanup: true
+    local_dir: .styles
+    bucket: wsb-integrations
+    upload-dir: css
+    region: eu-central-1
+  - provider: s3
+    access_key_id: AWS_S3_ACCESS_KEY
+    secret_access_key: AWS_S3_SECRET_KEY
+    skip_cleanup: true
+    local_dir: .templates
+    bucket: wsb-integrations
+    upload-dir: tmpl
+    region: eu-central-1
+

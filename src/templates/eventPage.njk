@@ -89,14 +89,8 @@
                                     </div>
                                 </div>
                                 {% if trainer.bio %}
-                                    <div class="wb-profile__text b-flip js-text-flip" data-max-height="80">
-                                        <div class="b-flip__inner" data-flip-helper>
-                                            {{ trainer.bio | safe }}
-                                        </div>
-                                        <a href="#" class="b-flip__link" data-flip-link>
-                                            <span class="b-flip__show">Show bio</span>
-                                            <span class="b-flip__hide">Hide</span>
-                                        </a>
+                                    <div class="wb-profile__text" data-max-height="80">
+                                        {{ trainer.bio | safe }}
                                     </div>
                                 {% endif %}
                             </div>
