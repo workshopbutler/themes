@@ -1,29 +1,29 @@
 {% macro registrationForm(instructions, formConfig, countries) %}
 <div>
-    <div class="wb-congratulation wb-after-registration">
-        <h2 class="wb-congratulation__title">
+    <div class="wsb-congratulation wsb-after-registration" data-post-registration-message>
+        <h2 class="wsb-congratulation__title">
             Thank you for the registration
         </h2>
-        <div class="wb-congratulation__p">
+        <div class="wsb-congratulation__p">
             Further details and your joining instructions will follow shortly by email.
         </div>
     </div>
 
-    <form action="#" class="wb-form wb-before-registration" data-widget-form>
-        <div class="wb-form__body">
-            <div class="wb-form__title">Register for the event</div>
-            <div class="wb-form__instructions">{{ instructions }}</div>
+    <form action="#" class="wsb-form wsb-before-registration" data-registration-form>
+        <div class="wsb-form__body">
+            <div class="wsb-form__title">Register for the event</div>
+            <div class="wsb-form__instructions">{{ instructions }}</div>
             {% from "./field.njk" import formField %}
             {% for section in formConfig %}
                 {% if section.name %}
-                    <div class="wb-form__section-title">{{ section.name }}</div>
+                    <div class="wsb-form__section-title">{{ section.name }}</div>
                 {% endif %}
                 {% for field in section.fields %}
                     {{ formField(field, countries) }}
                 {% endfor %}
             {% endfor %}
-
-            <button data-widget-submit type="submit" class="btn btn-primary wb-form__btn">
+            <div class="wsb-form__error" data-form-major-error></div>
+            <button data-widget-submit type="submit" class="btn btn-primary wsb-form__btn">
                 Register
             </button>
         </div>

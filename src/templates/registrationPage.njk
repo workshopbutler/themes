@@ -1,20 +1,20 @@
-<div class="wb-content">
-    <div class="wb-page">
-        <div class="wb-body wb-center">
-            <div class="wb-right-col">
-                <div class="wb-info">
-                    <div class="wb-info__title">Date:</div>
+<div class="wsb-content">
+    <div class="wsb-page">
+        <div class="wsb-body wsb-center">
+            <div class="wsb-right-col">
+                <div class="wsb-info">
+                    <div class="wsb-info__title">Date:</div>
                     {{ event.schedule }}
-                    {#<div class="wb-info__footer">{{ formatDate(event.start) }}</div>#}
+                    {#<div class="wsb-info__footer">{{ formatDate(event.start) }}</div>#}
                 </div>
-                <div class="wb-info">
-                    <div class="wb-info__title">Location:</div>
+                <div class="wsb-info">
+                    <div class="wsb-info__title">Location:</div>
                     {{ event.location }}
-                    {#<div class="wb-info__footer">{{ formatLanguages(event) }}</div>#}
+                    {#<div class="wsb-info__footer">{{ formatLanguages(event) }}</div>#}
                 </div>
                 {% if event.tickets.nonEmpty() %}
-                    <div class="wb-tickets wb-info">
-                        <div class="wb-info__title">Tickets:</div>
+                    <div class="wsb-tickets wsb-info">
+                        <div class="wsb-info__title">Tickets:</div>
                         {% if event.free %}
                             {% set freeDesc = formatTicketState(event.tickets.free, false) %}
                             Free. Registration is required
@@ -23,7 +23,7 @@
                         {% else %}
                             {% for ticket in event.tickets.paid %}
                                 <div>OK {{ ticket.isActive() }}</div>
-                                <div class="wb-ticket {% if not ticket.isActive() %} ended {% endif %}">
+                                <div class="wsb-ticket {% if not ticket.isActive() %} ended {% endif %}">
                                     {{ formatPrice(ticket.price, ticket.withTax) }} – {{ ticket.name }}
                                     <br/>
                                     <span class="hint">{{ formatTicket(ticket) }}</span>
@@ -34,7 +34,7 @@
                 {% endif %}
 
             </div>
-            <div class="wb-left-col">
+            <div class="wsb-left-col">
                 {% from "./builtInForm.njk" import registrationForm %}
                 {{ registrationForm(event.instructions, event.registration_form, countries) }}
             </div>

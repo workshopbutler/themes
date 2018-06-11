@@ -1,55 +1,55 @@
-<div class="wb-content">
-    <div class="wb-page">
-        <div class="wb-header wb-center">
+<div class="wsb-content">
+    <div class="wsb-page">
+        <div class="wsb-header wsb-center">
             <h1>{{ event.title }}</h1>
         </div>
-        <div class="wb-body wb-center">
-            <div class="wb-right-col">
+        <div class="wsb-body wsb-center">
+            <div class="wsb-right-col">
                 <div>
                     {% if event.registration.isClosed() %}
-                        <button class="wb-sidebar__register" disabled>{{ event.getReasonForClosedRegistration() }}</button>
+                        <button class="wsb-sidebar__register" disabled>{{ event.getReasonForClosedRegistration() }}</button>
                     {% else %}
                         <a href="#" target="_blank" data-registration-button
                                 {% if event.tickets.getActiveTicketId() %}
                                     data-ticket-id="{{ event.tickets.getActiveTicketId() }}"
                                 {% endif %}
-                           class="wb-sidebar__register">Register Now</a>
+                           class="wsb-sidebar__register">Register Now</a>
                     {% endif %}
                 </div>
-                <div class="wb-info">
-                    <div class="wb-info__title">Date:</div>
+                <div class="wsb-info">
+                    <div class="wsb-info__title">Date:</div>
                     {{ event.schedule }}
-                    {#<div class="wb-info__footer">{{ formatDate(event.start) }}</div>#}
+                    {#<div class="wsb-info__footer">{{ formatDate(event.start) }}</div>#}
                 </div>
-                <div class="wb-info">
-                    <div class="wb-info__title">Location:</div>
+                <div class="wsb-info">
+                    <div class="wsb-info__title">Location:</div>
                     {{ event.location }}
-                    <div class="wb-info__footer">{{ formatLanguages(event) }}</div>
+                    <div class="wsb-info__footer">{{ formatLanguages(event) }}</div>
                 </div>
                 {% if event.tickets.nonEmpty() %}
-                    <div class="wb-tickets wb-info">
+                    <div class="wsb-tickets wsb-info">
                         {% if event.free %}
-                            <div class="wb-ticket">
-                                <div class="wb-ticket__val">
+                            <div class="wsb-ticket">
+                                <div class="wsb-ticket__val">
                                     Free
                                 </div>
-                                <div class="wb-ticket__footer">
+                                <div class="wsb-ticket__footer">
                                     {{ formatTicketState(event.tickets.free, false) }}
                                 </div>
                             </div>
                         {% else %}
                             {% for ticket in event.tickets.paid %}
-                                <div class="wb-ticket {% if not ticket.isActive() %} state-closed {% endif %}">
-                                    <div class="wb-ticket__val">
+                                <div class="wsb-ticket {% if not ticket.isActive() %} state-closed {% endif %}">
+                                    <div class="wsb-ticket__val">
                                         {{ formatPrice(ticket.price, ticket.withVAT) }}
                                     </div>
-                                    <div class="wb-ticket__name">
+                                    <div class="wsb-ticket__name">
                                         {{ ticket.name }}
                                     </div>
-                                    <div class="wb-ticket__desc">
+                                    <div class="wsb-ticket__desc">
                                         {{ formatTicketDescription(ticket) }}
                                     </div>
-                                    <div class="wb-ticket__footer">
+                                    <div class="wsb-ticket__footer">
                                         {{ formatTicketState(ticket, true) }}
                                     </div>
                                 </div>
@@ -57,8 +57,8 @@
                         {% endif %}
                     </div>
                 {% endif %}
-                <div class="wb-workshops" id="upcoming-events">
-                    <div class="wb-workshops__title">
+                <div class="wsb-workshops" id="upcoming-events">
+                    <div class="wsb-workshops__title">
                         Upcoming events:
                     </div>
                     <div data-events-list></div>
@@ -66,19 +66,19 @@
                 {% from "./event/share.njk" import shareEvent %}
                 {{ shareEvent(event) }}
             </div>
-            <div class="wb-left-col">
+            <div class="wsb-left-col">
                 {% if event.description %}
-                    <div class="wb-desc">{{ event.description | safe }}</div>
+                    <div class="wsb-desc">{{ event.description | safe }}</div>
                 {% endif %}
                 {% if options.withTrainers %}
-                    <div class="wb-trainers">
+                    <div class="wsb-trainers">
                         {% for trainer in event.trainers %}
-                            <div class="wb-trainer">
-                                <div class="wb-profile">
+                            <div class="wsb-trainer">
+                                <div class="wsb-profile">
                                     {% set url = options.trainerPageUrl + '?id=' + trainer.id %}
                                     {% set photo = "background-image: url(" + trainer.photo + ");" %}
-                                    <a class="wb-profile_img" href="{{ url }}" style="{{ photo }}"></a>
-                                    <div class="wb-profile__name">
+                                    <a class="wsb-profile_img" href="{{ url }}" style="{{ photo }}"></a>
+                                    <div class="wsb-profile__name">
                                         <div class="inner">
                                             <h3>
                                                 {{ trainer.firstName }}
@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
                                 {% if trainer.bio %}
-                                    <div class="wb-profile__text" data-max-height="80">
+                                    <div class="wsb-profile__text" data-max-height="80">
                                         {{ trainer.bio | safe }}
                                     </div>
                                 {% endif %}

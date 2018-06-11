@@ -34,7 +34,7 @@ copy an API key for your account
 
 This command launches a webserver on `http://localhost:8080`. 
 
-* Open `http://localhost:8080/event-list.html` for the list of all events
+* Open `http://localhost:8080/schedule.html` for the list of all events
 * Open `http://localhost:8080/trainer-list.html` for the list of all trainers
 
 To compile a theme, use `npm run build`. The compiled files are in `dist/` directory.       
@@ -58,7 +58,8 @@ to the HTML pages (for example, `event-list.html`).
 
 Themes | Workshop Butler JS widgets
 -------------- | --------------------------
-0.3.0 | 0.3.0
-0.3.1 | 0.3.0
-0.3.2 | 0.3.2
+0.4.0 | 0.5.0 
 0.4.0 | 0.3.2 
+0.3.2 | 0.3.2
+0.3.1 | 0.3.0
+0.3.0 | 0.3.0

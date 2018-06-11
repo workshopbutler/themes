@@ -1,12 +1,12 @@
 {% macro table(events, tmpl) %}
     {% from "./row.njk" import drawRow %}
-    <div class="wb-event-list">
-        <div class="wb-table" data-event-list>
-            <div class="wb-table__head">
-                <div class="wb-table__col">When</div>
-                <div class="wb-table__col">Where</div>
-                <div class="wb-table__col">What</div>
-                <div class="wb-table__col"></div>
+    <div class="wsb-schedule">
+        <div class="wsb-table" data-event-list>
+            <div class="wsb-table__head">
+                <div class="wsb-table__col">When</div>
+                <div class="wsb-table__col">Where</div>
+                <div class="wsb-table__col">What</div>
+                <div class="wsb-table__col"></div>
             </div>
             {% for event in events %}
                 {% if tmpl %}
@@ -16,7 +16,7 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <div class="wb-no-events">
+        <div class="wsb-no-events" data-empty-list>
             No events were found
         </div>
     </div>

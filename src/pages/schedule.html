@@ -7,7 +7,7 @@
   <script src="http://code.jquery.com/jquery-2.2.4.min.js"
           integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
           crossorigin="anonymous"></script>
-  <script src="https://integrations.workshopbutler.com/widgets.<%= htmlWebpackPlugin.options.config.widgetVersion %>.js" defer></script>
+  <script src="https://cdn.workshopbutler.com/widgets.<%= htmlWebpackPlugin.options.config.widgetVersion %>.js" defer></script>
   <link href="https://fonts.googleapis.com/css?family=Arapey" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -42,19 +42,19 @@
 </script>
 
 <script id="event-tpl" type="text/x-nunjucks">
-    <div class="wb-tile" data-event-obj data-event-type="{{ event.type.id }}"
+    <div class="wsb-tile" data-event-obj data-event-type="{{ event.type.id }}"
       data-event-location="{{ event.country }}"
       data-event-language="{{ event.languages }}" data-event-trainer="{{ event.trainers }}">
-        <a data-widget-go href="{{ event.url }}" class="wb-tile-title">{{ event.title }}</a>
-        <div class="wb-tile-info">
+        <a data-widget-go href="{{ event.url }}" class="wsb-tile-title">{{ event.title }}</a>
+        <div class="wsb-tile-info">
           {{ event.schedule }}
           {% if event.free %}
-            <div class="wb-tile-free">free</div>
+            <div class="wsb-tile-free">free</div>
           {% endif %}
           <br/>
           {{ event.location }}
         </div>
-        <div class="wb-tile-content">{{ event.description | safe }}</div>
+        <div class="wsb-tile-content">{{ event.description | safe }}</div>
   </div>
 </script>
 </body>

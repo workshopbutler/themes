@@ -1,7 +1,7 @@
 {
   "name": "workshop_butler_themes",
-  "version": "0.4.0",
-  "description": "Workshop Butler default themes",
+  "version": "0.5.0",
+  "description": "Workshop Butler Themes",
   "author": "https://workshopbutler.com",
   "license": "ISC",
   "devDependencies": {

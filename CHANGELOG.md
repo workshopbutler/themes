@@ -1,3 +1,9 @@
+## 0.5.0
+* Changes the prefixes of most classes from `wb-` to `wsb-`
+* Adds a general form error, for example, when a server error happens and a user should be notified
+* Adds several 'data-' attributes to divs to replace the usage of classes with the usage of these attributes. It further weakens 
+the interconnections of the themes and [JS widgets](https://github.com/workshopbutler/js-widgets)
+
 ## 0.4.0
 * Removes hide/show links for trainers' bio on the event page
 * Increases a spacing between the instructions and the first field on the registraiton form

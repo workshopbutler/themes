@@ -1,7 +1,7 @@
 
-.wb-content {
+.wsb-content {
 
-  .wb-tiles {
+  .wsb-tiles {
     .clearfix();
     display: flex;
     justify-content: flex-start;
@@ -9,12 +9,12 @@
     flex-wrap: wrap;
   }
 
-  .wb-no-events {
+  .wsb-no-events {
     display: none;
     margin-bottom: 30px;
   }
 
-  .wb-tile {
+  .wsb-tile {
     flex: 0 0 32%;
     position: relative;
     overflow: hidden;
@@ -28,7 +28,7 @@
     margin-bottom: 30px;
     margin-right: 12px;
 
-    &:hover .wb-tile-button {
+    &:hover .wsb-tile-button {
       .transform(translate(0, -70px));
 
       &:before {
@@ -37,7 +37,7 @@
     }
   }
 
-  .wb-tile-title {
+  .wsb-tile-title {
     display: block;
     font-size: 26px;
     line-height: 36px;
@@ -52,7 +52,7 @@
     }
   }
 
-  .wb-tile-free {
+  .wsb-tile-free {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 500;
@@ -62,20 +62,20 @@
     vertical-align: 1px;
   }
 
-  .wb-tile-info {
+  .wsb-tile-info {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 23px;
   }
 
-  .wb-tile-content {
+  .wsb-tile-content {
     font-size: 16px;
     line-height: 26px;
     max-height: 182px;
     overflow: hidden;
   }
 
-  .wb-tile-button {
+  .wsb-tile-button {
     height: 70px;
     bottom: -70px;
     position: absolute;
@@ -94,7 +94,7 @@
     }
   }
 
-  .wb-tile-btn {
+  .wsb-tile-btn {
     padding: 0;
     height: 70px;
     position: absolute;
@@ -108,20 +108,20 @@
   }
 
   @media screen and (max-width: 1200px) {
-    .wb-tile {
+    .wsb-tile {
       flex: 0 1 48%;
       height: 360px;
       margin-right: 2% !important;
       margin-bottom: 20px;
     }
 
-    .wb-tile-content {
+    .wsb-tile-content {
       max-height: 130px;
     }
   }
 
   @media screen and (max-width: 767px) {
-    .wb-tile {
+    .wsb-tile {
       flex: 0 1 100%;
       margin-right: 0 !important;
     }

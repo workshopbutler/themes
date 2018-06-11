@@ -32,8 +32,8 @@ let webpackConfig = {
             filename: `[name].${process.env.npm_package_version}.min.css`
         }),
         new HtmlWebpackPlugin({
-            template: 'pages/event-list.html',
-            filename: 'event-list.html',
+            template: 'pages/schedule.html',
+            filename: 'schedule.html',
             inject: 'head',
             config: config.options
         }),
