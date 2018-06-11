@@ -1,3 +1,6 @@
+## 0.5.1
+* Further improves the templates to remove the dependence on classes for the [JS widgets](https://github.com/workshopbutler/js-widgets) logic 
+
 ## 0.5.0
 * Changes the prefixes of most classes from `wb-` to `wsb-`
 * Adds a general form error, for example, when a server error happens and a user should be notified

@@ -99,7 +99,7 @@
                 {% endif %}
 
                 {% from "./builtInForm.njk" import registrationForm %}
-                <div data-registration-form>
+                <div data-registration-block class="wsb-before-registration">
                     {{ registrationForm(event.instructions, event.registrationForm, countries) }}
                 </div>
 
