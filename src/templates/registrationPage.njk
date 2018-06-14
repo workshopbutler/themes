@@ -12,7 +12,7 @@
                     {{ event.location }}
                     {#<div class="wsb-info__footer">{{ formatLanguages(event) }}</div>#}
                 </div>
-                {% if event.tickets.nonEmpty() %}
+                {% if event.tickets %}
                     <div class="wsb-tickets wsb-info">
                         <div class="wsb-info__title">Tickets:</div>
                         {% if event.free %}
@@ -22,7 +22,6 @@
                             {{ freeDesc }}
                         {% else %}
                             {% for ticket in event.tickets.paid %}
-                                <div>OK {{ ticket.isActive() }}</div>
                                 <div class="wsb-ticket {% if not ticket.isActive() %} ended {% endif %}">
                                     {{ formatPrice(ticket.price, ticket.withTax) }} – {{ ticket.name }}
                                     <br/>
