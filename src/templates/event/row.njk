@@ -6,7 +6,7 @@
         <div class="wsb-table__col">
             {% if event.schedule.atOneDay() %}
                 {{ event.schedule.format('full_long') }}
-                {% if event.location.online %}
+                {% if event.location.online and event.schedule.timezone %}
                     {{ event.schedule.format('timezone_short') }}
                 {% endif %}
             {% else %}
