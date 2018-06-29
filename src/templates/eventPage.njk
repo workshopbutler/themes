@@ -18,12 +18,22 @@
                 </div>
                 <div class="wsb-info">
                     <div class="wsb-info__title">Date:</div>
-                    {{ event.schedule }}
-                    {#<div class="wsb-info__footer">{{ formatDate(event.start) }}</div>#}
+                    {% if event.schedule.atOneDay() %}
+                        {{ event.schedule.format('full_long') }} {{ event.schedule.format('timezone_short') }}
+                    {% else %}
+                        {{ event.schedule.format('start_long') }}
+                        —<br>{{ event.schedule.format('end_long') }} {{ event.schedule.format('timezone_short') }}
+                    {% endif %}
+                    {% if event.location.online and event.schedule.timezone %}
+                        <div class="wsb-info__footer">
+                            Current time in {{ event.schedule.format('timezone_short') }}
+                            {{ DateTime.local().setZone(event.schedule.timezone).toFormat('t') }}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="wsb-info">
                     <div class="wsb-info__title">Location:</div>
-                    {{ event.location }}
+                    {{ event.location.format() }}
                     <div class="wsb-info__footer">{{ formatLanguages(event) }}</div>
                 </div>
                 {% if event.tickets.nonEmpty() %}

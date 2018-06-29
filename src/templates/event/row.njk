@@ -1,12 +1,19 @@
 {% macro drawRow(event) %}
     <div class="wsb-table__row" data-event-obj data-event-type="{{ event.type.id }}"
-         data-event-location="{{ event.country }}"
+         data-event-location="{{ event.location.countryCode }}"
          data-event-language="{{ event.spokenLanguages | join(',') }}"
          data-event-trainer="{{ event.trainers | join(',') }}">
         <div class="wsb-table__col">
-            {{ event.schedule }}
+            {% if event.schedule.atOneDay() %}
+                {{ event.schedule.format('full_long') }}
+                {% if event.location.online %}
+                    {{ event.schedule.format('timezone_short') }}
+                {% endif %}
+            {% else %}
+                {{ event.schedule.format('full_short') }}
+            {% endif %}
         </div>
-        <div class="wsb-table__col">{{ event.location }}
+        <div class="wsb-table__col">{{ event.location.format() }}
             {% if event.free %}
                 <div class="wsb-table__first-free">free</div>
             {% endif %}

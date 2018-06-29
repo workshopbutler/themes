@@ -1,6 +1,6 @@
 {% for event in events %}
     <div class="wsb-workshop">
-        {{ event.schedule }} in {{ event.location }}
+        {{ event.schedule.format('full_short') }} in {{ event.location.format() }}
         <br>
         <a href="{{ event.url }}" class="wsb-link">
             {{ event.title }}

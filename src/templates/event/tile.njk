@@ -1,16 +1,23 @@
 {% macro drawEvent(event) %}
     <div class="wsb-tile" data-event-obj data-event-type="{{ event.type.id }}"
-         data-event-location="{{ event.country }}"
+         data-event-location="{{ event.location.countryCode }}"
          data-event-language="{{ event.spokenLanguages | join(',') }}"
          data-event-trainer="{{ event.trainers | join(',') }}">
         <a data-widget-go href="{{ event.url }}" class="wsb-tile-title">{{ event.title }}</a>
         <div class="wsb-tile-info">
-            {{ event.schedule }}
+            {% if event.schedule.atOneDay() %}
+                {{ event.schedule.format('full_long') }}
+                {% if event.location.online %}
+                    {{ event.schedule.format('timezone_short') }}
+                {% endif %}
+            {% else %}
+                {{ event.schedule.format('full_short') }}
+            {% endif %}
             {% if event.free %}
                 <div class="wsb-tile-free">free</div>
             {% endif %}
             <br/>
-            {{ event.location }}
+            {{ event.location.format() }}
         </div>
         <div class="wsb-tile-content">{{ event.description | safe }}</div>
         <div class="wsb-tile-button">
